@@ -25,10 +25,10 @@ All the codes were tested in Dosbox.
         INT 21h
     ```
 
-* Readkey
+* Readkey (Needs 00h in AH)
     ``` assembly
-        MOV AX, 0003h
-        int 10h
+        XOR AH, AH
+        int 16h
     ```
 
 * End of program
