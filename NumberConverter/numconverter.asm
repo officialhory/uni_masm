@@ -105,7 +105,7 @@ END_OF_PROGRAM:
 	MOV	ax, 4c00h
 	INT	21h
 
-RESULTDEC DB "    DEC w/o",13,10
+RESULTDEC DB "    DEC w/o loop",13,10
 RESULTLDEC DB "    DEC w/ loop",13,10
 RESULTBIN DB "         BIN w/ loop",13,10
 RESULTLHEX DB "   HEX w/ loop$"
