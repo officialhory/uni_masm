@@ -8,8 +8,8 @@ Start:
 	MOV AX, 0003h
 	INT 10h
 
-    MOV DI, offset titok
-    MOV SI, offset kulcs
+    MOV DI, offset secret
+    MOV SI, offset key
     MOV AH, 02
     MOV CX, 11
 
@@ -22,12 +22,12 @@ DECODE:
     INT 21h
     LOOP DECODE
 
-Program_Vege:
+END_OF_PROGRAM:
 	MOV	AX, 4c00h
 	INT	21h
 
-titok   db  "- 91g.r2#85"
-kulcs   db  "AIRTGORPLKF"
+secret   db  "- 91g.r2#85"
+key   db  "AIRTGORPLKF"
 
 Code	Ends
 
