@@ -10,6 +10,7 @@ Start:
 
     MOV DI, offset titok
     MOV SI, offset kulcs
+    MOV AH, 02
     MOV CX, 11
 
 DECODE:
@@ -18,12 +19,11 @@ DECODE:
     INC DI
     INC SI
 
-    MOV AH, 02
     INT 21h
     LOOP DECODE
 
 Program_Vege:
-	MOV	ax, 4c00h
+	MOV	AX, 4c00h
 	INT	21h
 
 titok   db  "- 91g.r2#85"
@@ -39,4 +39,3 @@ Stack	Segment
 
 Stack	Ends
 	End	Start
-
