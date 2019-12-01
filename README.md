@@ -25,6 +25,12 @@ All the codes were tested in Dosbox.
         INT 21h
     ```
 
+* Readkey
+    ``` assembly
+        MOV AX, 0003h
+        int 10h
+    ```
+
 * End of program
     ``` assembly
         mov	ax, 4c00h
